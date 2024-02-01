@@ -15,7 +15,7 @@ const Signup = () => {
     setErrMsg(error?.message)
     }
     onAuthStateChanged(firebaseAuth,(currentUser)=>{
-      if(currentUser) navigate('/')
+      if(currentUser) navigate('/user')
     })
   }
   return (
@@ -27,7 +27,7 @@ const Signup = () => {
         <p className='text-red-500 mt-2'>{errMsg}</p>
         <button className='px-8 py-2 text-xl rounded bg-blue-400 my-2 hover:bg-blue-500 transition-all duration-400' onClick={handleSignUp}>Signup</button>
         <p className='text-black text-left text-lg'>Already have an account?
-          <Link to="/login"> <span className='underline hover:text-blue-500'> Login</span></Link>
+          <Link to="/"> <span className='underline hover:text-blue-500'> Login</span></Link>
         </p>
       </div>
     </section>

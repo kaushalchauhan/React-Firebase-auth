@@ -16,7 +16,7 @@ const Login = () => {
     setErrMsg(error?.message)
    }
    onAuthStateChanged(firebaseAuth,(currentUser)=>{
-    if(currentUser) navigate('/')
+    if(currentUser) navigate('/user')
   })
   }
   return (
